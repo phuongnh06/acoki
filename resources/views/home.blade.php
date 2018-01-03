@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-xl-6">
                         <div class="menu-block">
                             <div class="menu-block-header">
                                 <p class="h4">
@@ -59,7 +59,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-xl-6">
                         <div class="menu-block">
                             <div class="menu-block-header">
                                 <p class="h4">
