@@ -1,0 +1,343 @@
+@font-face {
+	font-family: utm-sharnay;
+	src: url(../fonts/UTM_Sharnay.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/fontRoboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: ibm;
+    src: url(../fonts/IBMPlexSans-SemiBold.otf) format("opentype");
+}
+
+body {
+    font-family: roboto;
+}
+
+.color-part {
+	min-height: 50px;
+	background: linear-gradient(to left, #2670a3, #1279bf);
+}
+.background-image-part {
+    background: url("../images/background.png") left no-repeat;
+    width: 100%;
+    height: 797px;
+    padding: 160px 0;
+}
+.black-part {
+    background: #191c23;
+    min-height: 300px;
+}
+.content {
+    padding: 10px 0 10px 0;
+}
+
+.icorn {
+	display: inline-block;
+}
+.icorn-logo {
+	background-image: url("../images/logo.png");
+    width: 41px;
+    height: 76px;
+}
+.icorn-open {
+    background-image: url("../images/icon-open.png");
+    width: 115px;
+    height: 77px;
+}
+.icorn-close {
+    background-image: url("../images/icon-close.png");
+    width: 114px;
+    height: 77px;
+}
+.icorn-top-left {
+    position: absolute;
+    top: 0;
+    left: -96px;
+}
+.icon-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: -96px;
+}
+
+.slider-box {
+    width: 100%;
+    text-align: center;
+}
+
+.slider-tick {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.slider-black {
+    background: #333333;
+}
+
+.acoki {
+    font-family: utm-sharnay;
+    color: #fff;
+    font-size: 48px;
+    margin-left: 17px;
+}
+
+ul.menu {
+    font-size: 20px;
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+}
+
+ul.menu li {
+    display: inline-block;
+    margin: 0 10px 5px 10px;
+}
+
+ul.menu li:nth-child(5) {
+    margin-right: 30px!important;
+}
+
+ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-active {
+    border-bottom: 2px solid #fff;
+}
+
+.border-only {
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 9px 34px 9px 35px;
+}
+
+.menu-block {
+    min-height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 20px 20px 20px 20px;
+    margin: 15px 0 20px 0;
+    border-radius: 5px;
+    height: 476px;
+}
+
+.menu-block-header {
+    margin-bottom: 20px;
+}
+
+.radius-button {
+    font-size: 14px;
+    padding: 5px 12px 5px 12px;
+    border-radius: 50px;
+}
+
+.menu-block-content {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px 5px;
+    color: #000;
+    height: 90px;
+}
+.menu-block-content:not(:last-child) {
+    margin-bottom: 10px;
+}
+.menu-block-content p {
+    margin-bottom: 4px;
+}
+.menu-block-left {
+    position: absolute;
+    left: 0;
+    width: 80px;
+    text-align: center;
+    font-size: 10px;
+    color: #f4ae27;
+}
+.menu-block-info {
+    position: absolute;
+    width: 100%;
+    margin: 0 110px 0 80px;
+}
+.menu-block-right {
+    position: absolute;
+    right: 0;
+    width: 110px;
+}
+.menu-info-name, .menu-info-price {
+    font-weight: bold;
+    font-size: 18px;
+}
+.menu-info-name {
+    color: #387eb6;
+}
+.menu-info-address, .menu-info-info, .menu-info-day {
+    font-size: 14px;
+}
+.menu-info-info {
+    color: #5d5d5d;
+}
+.menu-info-price {
+    color: #c31616;
+}
+.menu-info-status {
+    background: linear-gradient(to left, #387eb6, #6ca5d3);
+    padding: 2px 8px 2px 4px;
+    border-radius: 5px;
+    color: #fff;
+}
+.menu-info-day {
+    color: #333333;
+}
+.menu-info-price, .menu-info-status, .menu-info-day {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.introduction, .customer-said {
+    font-family: ibm;
+    font-size: 30px;
+    color: #387eb6;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.intro-param {
+    max-width: 520px;
+}
+a.intro-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #387eb6;
+    text-decoration: none;
+}
+.intro-more {
+    border: 1px solid #387eb6;
+    border-radius: 50px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    font-size: 30px;
+    padding: 8px 69px 7px 69px;
+}
+
+.application-background {
+    background: url("../images/application.png") center;
+    max-width: 1414px;
+    height: 955px;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+.app-text {
+    font-family: ibm;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.white-part {
+    min-height: 700px;
+    padding: 90px;
+}
+.hide {
+    display: none;
+}
+.customer-said {
+    text-align: center;
+}
+
+.customer-info {
+    text-align: center;
+    margin-top: 30px;
+}
+.customer-info > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.customer-info > p {
+    font-family: Roboto;
+    margin: 30px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.customer-comment {
+    position: relative;
+    min-height: 100px;
+    color: #333333;
+    padding: 20px 0;
+}
+.customer-comment p {
+    margin: 20px auto;
+    font-size: 14px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.black-part p {
+    color: #fff;
+}
+.black-part .content {
+    padding: 50px 0;
+}
+.black-part .content p.h5 {
+    margin-bottom: 20px;
+}
+.black-part .content p span {
+    color: #1279bf;
+    margin-right: 20px;
+}
+.black-part .content p:not(:first-child) {
+    font-size: 14px;
+}
+.img-map {
+    width: 300px;
+    margin-bottom: 20px;
+}
+.img-apps {
+    width: 120px;
+}
+.img-apps:first-child {
+    margin-right: 20px;
+}
+
+.we-are {
+    font-size: 1.25rem!important;
+    margin-top: 20px;
+    margin-bottom: 10px!important;
+}
+.isocial a{
+    color: #bbbbbb!important;
+    font-size: 45px;
+    border-radius: 20px;
+}
+.isocial a:not(:last-child) {
+    margin-right: 16px;
+}
+
+.blue-part {
+    background: #1279bf;
+    text-align: center;
+    color: #fff;
+    height: 44px;
+    font-size: 16px;
+}
+.blue-part p {
+   margin-bottom: 0;
+}
+.blue-part p span {
+    margin-right: 10px;
+}
