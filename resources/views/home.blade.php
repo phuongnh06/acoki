@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nội dung công việc</label>
-                                    <textarea title="Nội dung công việc" rows="10" class="form-control" name="content"></textarea>
+                                    <textarea title="Nội dung công việc" rows="9" class="form-control" name="content"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Đăng việc</button>
                                 <a href="#" class="btn btn-success float-right">Việc của tôi</a>
