@@ -90,6 +90,35 @@ body {
     margin-left: 17px;
 }
 
+@media screen and (max-width: 766px) {
+    .sign-in-right {
+        display: inline-block;
+    }
+
+    ul.menu li:last-child {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .sign-in-right {
+        display: none;
+    }
+}
+
+.sign-in-right {
+    margin-top: 23px;
+}
+
+a.sign-in {
+    text-decoration: none;
+}
+
+.sign-in:hover {
+    background: #fff;
+    color: #2172aa;
+}
+
 ul.menu {
     font-size: 16px;
     list-style: none;
@@ -231,12 +260,110 @@ a.intro-more {
 }
 
 .application-background {
-    background: url("../images/application.png") center;
+    background: url("../images/application.png") center no-repeat;
     max-width: 1414px;
-    height: 955px;
+    height: 960px;
     padding-top: 60px;
     margin: 0 auto;
+    overflow: hidden;
 }
+
+.screen-mobile {
+    width: 1414px;
+    height: 667px;
+    margin: 72px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.screenMobile {
+    z-index: 20;
+    left: 543px;
+    /*left: 38.4%;*/
+}
+
+.screen {
+    position: absolute;
+}
+
+.screen1, .screen2, .screen4 {
+    top: 82px;
+    /*top: 12%;*/
+    width: 283px;
+    height: 504px;
+}
+
+.screen3, .screen5, .screen6 {
+    top: 96px;
+    /*top: 14%;*/
+    width: 267px;
+    height: 475px;
+    z-index: 18;
+}
+
+.screen1 {
+    left: 565px;
+    z-index: 21;
+}
+
+@keyframes move1 {
+    0% {left: 565px;}
+    20% {box-shadow: -10px 5px 140px #333; z-index: 21}
+    100% {left: 263px; box-shadow: -10px 5px 140px #333; z-index: 21}
+}
+
+.screen2 {
+    left: 263px;
+    z-index: 19;
+    box-shadow: -10px 5px 140px #333;
+}
+
+@keyframes move2 {
+    0% {left: 263px;}
+    20% {box-shadow: none;}
+    100% {left: 0; top: 96px; width: 267px; height: 475px; box-shadow: none;}
+}
+
+.screen3 {
+    left: 0;
+}
+
+@keyframes move3 {
+    0% {left: 0;}
+    100% {left: -270px;}
+}
+
+.screen4 {
+    right: 263px;
+    z-index: 19;
+    box-shadow: 10px 5px 140px #333;
+}
+
+@keyframes move4 {
+    0% {right: 263px; z-index: 21;}
+    20% {z-index: 21; box-shadow: none;}
+    100% {right: 565px; z-index: 21; box-shadow: none;}
+}
+
+.screen5 {
+    right: 0;
+}
+
+@keyframes move5 {
+    0% {right: 0;}
+    20% {box-shadow: -10px 5px 140px #333; z-index: 20;}
+    100% {right: 263px; top: 82px; width: 283px; height: 504px; box-shadow: -10px 5px 140px #333; z-index: 20;}
+}
+
+.screen6 {
+    right: -270px;
+}
+
+@keyframes move6 {
+    0% {right: -270px;}
+    100% {right: 0;}
+}
+
 .app-text {
     font-family: ibm;
     text-align: center;

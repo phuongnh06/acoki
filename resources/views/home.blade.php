@@ -16,6 +16,9 @@
                     <div class="col-xl-3">
                         <span class="icorn icorn-logo float-left"></span>
                         <p class="acoki float-left">ACOKI</p>
+                        <a href="#" class="border-only text-uppercase float-right sign-in sign-in-right">
+                            Đăng nhập
+                        </a>
                     </div>
                     <div class="col-xl-8 offset-xl-1">
                         <div style="margin-top: 26px;">
@@ -28,7 +31,7 @@
                                     <a href="#more">Thêm</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="border-only text-uppercase">
+                                    <a href="#" class="border-only text-uppercase sign-in">
                                         Đăng nhập
                                     </a>
                                 </li>
@@ -65,7 +68,9 @@
                                 <p class="h4">
                                     <span class="fa fa-search"></span>
                                     TÌM VIỆC NGAY
-                                    <a class="radius-button bg-success float-right">Xem thêm &gt;&gt;</a>
+                                    <a class="radius-button bg-success float-right">
+                                        Xem thêm &gt;&gt;
+                                    </a>
                                 </p>
                             </div>
                             <div class="menu-block-content">
@@ -182,7 +187,9 @@
                 <p class="intro-param">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis, velit eu interdum rhoncus,massa neque commodo risus, ac eleifend mauris augue vitae lectus. Praesent blandit, massa non sodales cursus, quam elit tempus urna, sit amet mattis sem enim et odio. Nam at diam eget erat convallis facilisis in at diam. Proin gravida tortor erat, sit amet gravida urna commodo at. Donec vitae felis
                 </p>
-                <a class="intro-more" href="#">Xem thêm</a>
+                <a class="intro-more" href="" onclick="alert('Bị lừa rồi ahahah')">
+                    Xem thêm
+                </a>
             </div>
         </div>
     </div>
@@ -193,6 +200,15 @@
             </p>
             <div style="text-align: center">
                 <p style="width: 140px; border-top: 2px solid #fff; display: inline-block"></p>
+            </div>
+            <div class="screen-mobile">
+                <img src="{{asset('images/screenmobile.png')}}" class="screen screenMobile">
+                <img src="{{asset('images/screen1.png')}}" class="screen screen1" id="screen1">
+                <img src="{{asset('images/screen4.png')}}" class="screen screen2" id="screen2">
+                <img src="{{asset('images/screen5.png')}}" class="screen screen3" id="screen3">
+                <img src="{{asset('images/screen3.png')}}" class="screen screen4" id="screen4">
+                <img src="{{asset('images/screen2.png')}}" class="screen screen5" id="screen5">
+                <img src="{{asset('images/screen5.png')}}" class="screen screen6" id="screen6">
             </div>
         </div>
     </div>
@@ -279,7 +295,7 @@
                     <div class="col-xl-4">
                         <p class="h5">Bản đồ</p>
                         <div>
-                            <a>
+                            <a href="https://goo.gl/PmHGMe" target="_blank">
                                 <img src="{{asset('images/map.png')}}" class="img-map">
                             </a>
                         </div>
