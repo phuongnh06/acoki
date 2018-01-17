@@ -28,7 +28,7 @@
                                 <li><a href="#news">Tin tức</a></li>
                                 <li><a href="#download">Tải về</a></li>
                                 <li>
-                                    <a href="#more">Thêm</a>
+                                    <a href="#more">Xem thêm</a>
                                 </li>
                                 <li>
                                     <a href="#" class="border-only text-uppercase sign-in">

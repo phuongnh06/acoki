@@ -1,6 +1,7 @@
 $(document).ready(function(){
     setInterval(slideAnimationChange, 0);
-    setInterval(slideChangeImage, 6000);
+    setInterval(slideChangeImage, 3000);
+    center();
 });
 
 $('.slider-tick').click(function(){
@@ -12,6 +13,20 @@ $('.slider-tick').click(function(){
     $(this).addClass('slider-black');
     $('.'+customer).removeClass('hide');
 });
+
+$(window).resize(function(){
+    center();
+});
+
+function center(){
+    var screen = $('.screen-mobile');
+
+    if($(window).width() < 1200) {
+        screen.css('left', ($(window).width()-screen.width())/2);
+    } else {
+        screen.css('left', 'auto');
+    }
+}
 
 function slideChangeImage() {
     var scr1 = $('.screen1');
@@ -44,10 +59,10 @@ function slideAnimationChange() {
     var scr6 = $('.screen6');
 
 
-    scr1.css('animation', 'move1 6s infinite');
-    scr2.css('animation', 'move2 6s infinite');
-    scr3.css('animation', 'move3 6s infinite');
-    scr4.css('animation', 'move4 6s infinite');
-    scr5.css('animation', 'move5 6s infinite');
-    scr6.css('animation', 'move6 6s infinite');
+    scr1.css('animation', 'move1 1s infinite').css('animation-delay', '2s');
+    scr2.css('animation', 'move2 1s infinite').css('animation-delay', '2s');
+    scr3.css('animation', 'move3 1s infinite').css('animation-delay', '2s');
+    scr4.css('animation', 'move4 1s infinite').css('animation-delay', '2s');
+    scr5.css('animation', 'move5 1s infinite').css('animation-delay', '2s');
+    scr6.css('animation', 'move6 1s infinite').css('animation-delay', '2s');
 }

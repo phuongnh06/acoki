@@ -13,6 +13,41 @@
     src: url(../fonts/IBMPlexSans-SemiBold.otf) format("opentype");
 }
 
+@keyframes move1 {
+    0% {left: 565px;}
+    79% {left: 264px; z-index: 21}
+    80% {left: 263px; box-shadow: -45px 5px 50px #3c3c3c66; z-index: 19}
+    100% {left: 263px; box-shadow: -45px 5px 50px #3c3c3c66; z-index: 19}
+}
+@keyframes move2 {
+    0% {left: 263px;}
+    40% {box-shadow: none;}
+    80% {left: 0; top: 96px; width: 267px; height: 475px; box-shadow: none; z-index: 18}
+    100% {left: 0; top: 96px; width: 267px; height: 475px; box-shadow: none; z-index: 18}
+}
+@keyframes move3 {
+    0% {left: 0;}
+    80% {left: -270px;}
+    100% {left: -270px;}
+}
+@keyframes move4 {
+    0% {right: 263px; z-index: 21;}
+    40% {z-index: 21; box-shadow: none;}
+    80% {right: 565px; z-index: 21; box-shadow: none;}
+    100% {right: 565px; z-index: 21; box-shadow: none;}
+}
+@keyframes move5 {
+    0% {right: 0;}
+    40% {top: 82px; width: 283px; height: 504px; box-shadow: 45px 5px 50px #3c3c3c66; z-index: 19;}
+    80% {right: 263px; top: 82px; width: 283px; height: 504px; box-shadow: 45px 5px 50px #3c3c3c66; z-index: 19;}
+    100% {right: 263px; top: 82px; width: 283px; height: 504px; box-shadow: 45px 5px 50px #3c3c3c66; z-index: 19;}
+}
+@keyframes move6 {
+    0% {right: -270px;}
+    80% {right: 0;}
+    100% {right: 0;}
+}
+
 body {
     font-family: roboto;
 }
@@ -259,6 +294,10 @@ a.intro-more {
     padding: 8px 69px 7px 69px;
 }
 
+.customer-detail {
+    min-height: 340px;
+}
+
 .application-background {
     background: url("../images/application.png") center no-repeat;
     max-width: 1414px;
@@ -271,9 +310,9 @@ a.intro-more {
 .screen-mobile {
     width: 1414px;
     height: 667px;
-    margin: 72px auto;
+    margin: 72px 0;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .screenMobile {
@@ -306,62 +345,28 @@ a.intro-more {
     z-index: 21;
 }
 
-@keyframes move1 {
-    0% {left: 565px;}
-    20% {box-shadow: -10px 5px 140px #333; z-index: 21}
-    100% {left: 263px; box-shadow: -10px 5px 140px #333; z-index: 21}
-}
-
 .screen2 {
     left: 263px;
     z-index: 19;
-    box-shadow: -10px 5px 140px #333;
-}
-
-@keyframes move2 {
-    0% {left: 263px;}
-    20% {box-shadow: none;}
-    100% {left: 0; top: 96px; width: 267px; height: 475px; box-shadow: none;}
+    box-shadow: -45px 5px 50px #3c3c3c66;
 }
 
 .screen3 {
     left: 0;
 }
 
-@keyframes move3 {
-    0% {left: 0;}
-    100% {left: -270px;}
-}
-
 .screen4 {
     right: 263px;
     z-index: 19;
-    box-shadow: 10px 5px 140px #333;
-}
-
-@keyframes move4 {
-    0% {right: 263px; z-index: 21;}
-    20% {z-index: 21; box-shadow: none;}
-    100% {right: 565px; z-index: 21; box-shadow: none;}
+    box-shadow: 45px 5px 50px #3c3c3c66;
 }
 
 .screen5 {
     right: 0;
 }
 
-@keyframes move5 {
-    0% {right: 0;}
-    20% {box-shadow: -10px 5px 140px #333; z-index: 20;}
-    100% {right: 263px; top: 82px; width: 283px; height: 504px; box-shadow: -10px 5px 140px #333; z-index: 20;}
-}
-
 .screen6 {
     right: -270px;
-}
-
-@keyframes move6 {
-    0% {right: -270px;}
-    100% {right: 0;}
 }
 
 .app-text {
