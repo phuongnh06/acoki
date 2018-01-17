@@ -91,12 +91,12 @@ body {
 .icorn-top-left {
     position: absolute;
     top: 0;
-    left: -96px;
+    left: 0;
 }
 .icon-bottom-right {
     position: absolute;
     bottom: 0;
-    right: -96px;
+    right: 0;
 }
 
 .slider-box {
@@ -417,6 +417,7 @@ a.intro-more {
     font-size: 14px;
     padding: 0 20px;
     text-align: center;
+    width: 800px;
 }
 
 .black-part p {
