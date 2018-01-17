@@ -254,7 +254,7 @@
                 <div class="customer-detail detail-3 hide">
                     <div class="customer-info">
                         <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t1.0-9/10590573_498302647016806_8415941919985221539_n.jpg?oh=5451b9cee3b49371bfc0f46cd81e57e3&oe=5ABCAFBA">
-                        <p class="h3">Bùi Quang Phú - Best Xàm</p>
+                        <p class="h3">Bùi Quang Phú - Leader Team Marketing</p>
                     </div>
                     <div class="customer-comment">
                         <span class="icorn icorn-open icorn-top-left"></span>
@@ -306,7 +306,7 @@
                             <a>
                                 <img src="{{asset('images/ios.png')}}" class="img-apps">
                             </a>
-                            <a>
+                            <a href="https://goo.gl/Yzbewd">
                                 <img src="{{asset('images/android.png')}}" class="img-apps">
                             </a>
                         </div>
