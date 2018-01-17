@@ -90,7 +90,7 @@ body {
 }
 .icorn-top-left {
     position: absolute;
-    top: 0;
+    top: 300px;
     left: 0;
 }
 .icon-bottom-right {
@@ -129,15 +129,20 @@ body {
     .sign-in-right {
         display: inline-block;
     }
-
     ul.menu li:last-child {
         display: none;
+    }
+    .customer-comment {
+        width: 500px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .sign-in-right {
         display: none;
+    }
+    .customer-comment {
+        width: 800px;
     }
 }
 
@@ -295,7 +300,7 @@ a.intro-more {
 }
 
 .customer-detail {
-    min-height: 361px;
+    min-height: 340px;
 }
 
 .application-background {
@@ -411,13 +416,12 @@ a.intro-more {
     min-height: 100px;
     color: #333333;
     padding: 20px 0;
+    text-align: center;
+    margin: 0 auto;
 }
 .customer-comment p {
-    margin: 20px auto;
     font-size: 14px;
-    padding: 0 20px;
-    text-align: center;
-    width: 800px;
+    display: inline;
 }
 
 .black-part p {
