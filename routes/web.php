@@ -13,8 +13,4 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::resource('/home', 'JobController')->except('destroy');
+Route::resource('/', 'JobController')->except('destroy');
