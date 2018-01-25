@@ -226,6 +226,11 @@ ul.menu li a {
 .menu-block-content p {
     margin-bottom: 4px;
 }
+.menu-block-body {
+    height: 390px;
+    width: 500px;
+    overflow-x: hidden;
+}
 .menu-block-left {
     position: absolute;
     left: 0;

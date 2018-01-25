@@ -2,6 +2,7 @@ $(document).ready(function(){
     setInterval(slideAnimationChange, 0);
     setInterval(slideChangeImage, 3000);
     center();
+    $(".menu-block-body").niceScroll({horizrailenabled:false});
 });
 
 $('.slider-tick').click(function(){
@@ -57,7 +58,6 @@ function slideAnimationChange() {
     var scr4 = $('.screen4');
     var scr5 = $('.screen5');
     var scr6 = $('.screen6');
-
 
     scr1.css('animation', 'move1 1s infinite').css('animation-delay', '2s');
     scr2.css('animation', 'move2 1s infinite').css('animation-delay', '2s');

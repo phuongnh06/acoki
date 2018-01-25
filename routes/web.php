@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,5 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::resource('/home', 'JobController')->except('destroy');
