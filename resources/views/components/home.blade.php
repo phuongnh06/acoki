@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Acoki</title>
     <script src="{{asset('js/jquery-3.2.1.js')}}"></script>
+	<link rel="shortcut icon" href="{{{ asset('favicon.ico') }}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('bootstrap-4.0.0/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
