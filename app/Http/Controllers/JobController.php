@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pictures;
 use App\Models\Works;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class JobController extends Controller
 {
@@ -15,7 +19,7 @@ class JobController extends Controller
     public function index()
     {
         $works = Works::with('user', 'comment', 'request')->orderBy('work_id', 'DESC')->get();
-        return view('components/home', compact('works'));
+        return view('components/homepage/index', compact('works'));
     }
 
     /**
@@ -36,7 +40,58 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->validate($request,[
+            'title' => 'required|min:4',
+            'description' => 'required|min:4',
+            'time_begin' => 'required|date',
+            'time_end' => 'nullable|date',
+            'number_people' => 'required|numeric',
+            'price' => 'required|numeric',
+            'purchase_location' => 'required',
+            'gender' => 'required|numeric'
+        ]);
+
+        $image = $this->uploadImage($request);
+
+        Works::create([
+            'type' => 1,
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'time_begin' => strtotime($data['time_begin']) * 1000,
+            'time_end' => strtotime($data['time_end']) * 1000,
+            'image_default' => 1,
+            'create_time' => strtotime(Carbon::now()),
+            'user_id' => $request->user()->user_id,
+            'number_people' => $data['number_people'],
+            'price' => $data['price'],
+            'purchase_location' => $data['purchase_location'],
+            'picture_id' => $image,
+            'gender' => $data['gender']
+        ]);
+
+        return redirect()->route('store');
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return string|null
+     */
+    public function uploadImage($request)
+    {
+        if($request->has('image')) {
+            $image = $request->file('image');
+            $name = md5($image->getClientOriginalName().time()) .'.'. $image->getClientOriginalExtension();
+            Storage::putFileAs('public', $image, $name);
+
+            $picture = Pictures::create([
+                'url_medium' => $name,
+                'create_time' => strtotime(Carbon::now())
+            ]);
+
+            return $picture->id;
+        }
+
+        return null;
     }
 
     /**

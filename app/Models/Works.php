@@ -12,6 +12,9 @@ class Works extends Model
     protected $primaryKey = 'work_id';
     public $timestamps = false;
 
+    protected $fillable = ['type', 'title', 'description', 'time_begin', 'time_end', 'image_default',
+        'create_time', 'user_id', 'number_people', 'price', 'purchase_location', 'picture_id', 'gender'];
+
     public function getShortTitleAttribute()
     {
         if (mb_strlen($this->title) >= 30) {

@@ -14,3 +14,10 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::resource('/', 'JobController')->except('destroy');
+
+Route::get('/redirect', ['as' => 'facebookredirect', 'uses' => 'FacebookLoginController@redirect']);
+Route::get('/login', ['as' => 'facebookcallback', 'uses' => 'FacebookLoginController@callback']);
+Route::get('/logout', function(){
+    Auth::logout();
+    return redirect()->route('index');
+})->name('logout');

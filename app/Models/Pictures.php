@@ -10,4 +10,5 @@ class Pictures extends Model
     protected $primaryKey = 'picture_id';
 
     public $timestamps = false;
+    protected $fillable = ['url_small', 'url_medium', 'url_large', 'create_time'];
 }
