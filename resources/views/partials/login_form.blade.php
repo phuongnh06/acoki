@@ -1,4 +1,4 @@
-<div class="modal fade" id="login_form sign_job_form">
+<div class="modal fade" id="login_form">
     <div class="modal-dialog">
         <div class="modal-content">
 

@@ -41,6 +41,7 @@ class JobController extends Controller
     public function store(Request $request)
     {
         $data = $this->validate($request,[
+            'type' => 'required|numeric',
             'title' => 'required|min:4',
             'description' => 'required|min:4',
             'time_begin' => 'required|date',
@@ -54,12 +55,12 @@ class JobController extends Controller
         $image = $this->uploadImage($request);
 
         Works::create([
-            'type' => 1,
+            'type' => $data['type'],
             'title' => $data['title'],
             'description' => $data['description'],
             'time_begin' => strtotime($data['time_begin']) * 1000,
             'time_end' => strtotime($data['time_end']) * 1000,
-            'image_default' => 1,
+            'image_default' => $data['type'],
             'create_time' => strtotime(Carbon::now()) * 1000,
             'user_id' => $request->user()->user_id,
             'number_people' => $data['number_people'],

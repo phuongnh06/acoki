@@ -22,12 +22,17 @@
                     @endif
                     {!! Form::open(['url' => $route, 'method' => $method, 'files' => true]) !!}
                         <div class="form-group">
+                            {{Form::label('type', 'Loại công việc')}}
+                            {{Form::select('type', config('jobs'), 1,
+                                ['class' => "form-control"])}}
+                        </div>
+                        <div class="form-group">
                             {{Form::label('title', 'Tiêu đề')}}
                             {{Form::text('title', isset($job->title) ? $job->title : null,
                                 ['class' => "form-control"])}}
                         </div>
                         <div class="form-group">
-                            {{Form::label('description', 'Tóm tắt công việc')}}
+                            {{Form::label('description', 'Mô tả công việc')}}
                             {{Form::textarea('description', isset($job->description) ? $job->description : null,
                                 ['class' => "form-control"])}}
                         </div>
@@ -52,7 +57,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            {{Form::label('price', 'Tiền lương')}}
+                            {{Form::label('price', 'Tiền công')}}
                             {{Form::text('price', isset($job->price) ? $job->price : null, ['class' => "form-control"])}}
                         </div>
                         <div class="form-group">

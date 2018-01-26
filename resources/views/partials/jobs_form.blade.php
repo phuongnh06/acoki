@@ -17,7 +17,7 @@
                     <textarea title="Nội dung công việc" rows="9" class="form-control" name="content"></textarea>
                 </div>
                 <button type="button" class="btn btn-primary"
-                        data-toggle="modal" data-target="#sign_job_form" >Đăng việc</button>
+                        data-toggle="modal" data-target="{{ Auth::check() ? '#sign_job_form' : '#login_form' }}" >Đăng việc</button>
                 <a href="#" class="btn btn-success float-right">Việc của tôi</a>
             </form>
         </div>
