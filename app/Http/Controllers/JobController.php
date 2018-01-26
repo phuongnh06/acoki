@@ -60,7 +60,7 @@ class JobController extends Controller
             'time_begin' => strtotime($data['time_begin']) * 1000,
             'time_end' => strtotime($data['time_end']) * 1000,
             'image_default' => 1,
-            'create_time' => strtotime(Carbon::now()),
+            'create_time' => strtotime(Carbon::now()) * 1000,
             'user_id' => $request->user()->user_id,
             'number_people' => $data['number_people'],
             'price' => $data['price'],
