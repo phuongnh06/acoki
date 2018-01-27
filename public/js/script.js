@@ -3,6 +3,69 @@ $(document).ready(function(){
     setInterval(slideChangeImage, 3000);
     center();
     $(".menu-block-body").niceScroll({horizrailenabled:false});
+
+    var buy = $('.buy');
+    var pg = $('.pg');
+    var work = $('.work');
+    var talk = $('.talk');
+    var ship = $('.ship');
+    var online = $('.online');
+
+    $('input[name=name]').change(function(){
+        $('input[name=title]').val($('input[name=name]').val())
+    });
+
+    $('textarea[name=content]').change(function(){
+        $('textarea[name=description]').val($('textarea[name=content]').val())
+    });
+
+    $('select[name=type]').change(function(){
+        var typeWork = $('select[name=type]').val();
+        console.log(typeWork);
+        if(typeWork == 1) {
+            buy.css('display', 'none');
+            pg.css('display', 'none');
+            work.css('display', 'none');
+            talk.css('display', 'none');
+            online.css('display', 'none');
+            ship.css('display', 'block');
+        } else if (typeWork == 2) {
+            pg.css('display', 'none');
+            work.css('display', 'none');
+            talk.css('display', 'none');
+            ship.css('display', 'none');
+            online.css('display', 'none');
+            buy.css('display', 'block');
+        } else if (typeWork == 3) {
+            buy.css('display', 'none');
+            work.css('display', 'none');
+            talk.css('display', 'none');
+            ship.css('display', 'none');
+            online.css('display', 'none');
+            pg.css('display', 'block');
+        } else if (typeWork == 4) {
+            buy.css('display', 'none');
+            pg.css('display', 'none');
+            work.css('display', 'none');
+            ship.css('display', 'none');
+            online.css('display', 'none');
+            talk.css('display', 'block');
+        } else if (typeWork == 5) {
+            buy.css('display', 'none');
+            pg.css('display', 'none');
+            talk.css('display', 'none');
+            ship.css('display', 'none');
+            online.css('display', 'none');
+            work.css('display', 'block');
+        } else if (typeWork == 6) {
+            buy.css('display', 'none');
+            pg.css('display', 'none');
+            talk.css('display', 'none');
+            ship.css('display', 'none');
+            work.css('display', 'none');
+            online.css('display', 'block');
+        }
+    });
 });
 
 $('.slider-tick').click(function(){

@@ -18,7 +18,10 @@ class JobController extends Controller
      */
     public function index()
     {
-        $works = Works::with('user', 'comment', 'request')->orderBy('work_id', 'DESC')->get();
+        $works = Works::with('user', 'comment', 'request')
+                        ->orderBy('work_id', 'DESC')
+                        ->limit(30)
+                        ->get();
         return view('components/homepage/index', compact('works'));
     }
 
@@ -44,12 +47,17 @@ class JobController extends Controller
             'type' => 'required|numeric',
             'title' => 'required|min:4',
             'description' => 'required|min:4',
-            'time_begin' => 'required|date',
+            'time_begin' => 'nullable|date',
             'time_end' => 'nullable|date',
-            'number_people' => 'required|numeric',
+            'time_work' => 'nullable|numeric',
+            'number_people' => 'nullable|numeric',
             'price' => 'required|numeric',
             'purchase_location' => 'required',
-            'gender' => 'required|numeric'
+            'gender' => 'nullable|numeric',
+            'delivery_location' => 'nullable',
+            'phone_receiver' => 'nullable',
+            'deadline' => 'nullable',
+            'name_receiver' => 'nullable'
         ]);
 
         $image = $this->uploadImage($request);
@@ -60,6 +68,7 @@ class JobController extends Controller
             'description' => $data['description'],
             'time_begin' => strtotime($data['time_begin']) * 1000,
             'time_end' => strtotime($data['time_end']) * 1000,
+            'time_work' => $data['time_work'],
             'image_default' => $data['type'],
             'create_time' => strtotime(Carbon::now()) * 1000,
             'user_id' => $request->user()->user_id,
@@ -67,7 +76,10 @@ class JobController extends Controller
             'price' => $data['price'],
             'purchase_location' => $data['purchase_location'],
             'picture_id' => $image,
-            'gender' => $data['gender']
+            'gender' => $data['gender'],
+            'delivery_location' => $data['delivery_location'],
+            'phone_receiver' => $data['phone_receiver'],
+            'name_receiver' => $data['name_receiver'],
         ]);
 
         return redirect()->route('store');

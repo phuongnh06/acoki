@@ -10,7 +10,7 @@
             <form method="post" action="">
                 <div class="form-group">
                     <label>Tiêu đề</label>
-                    <input type="text" title="Tiêu đề" class="form-control" name="title">
+                    <input type="text" title="Tiêu đề" class="form-control" name="name">
                 </div>
                 <div class="form-group">
                     <label>Nội dung công việc</label>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="menu-block-info">
-                            <p class="menu-info-name" title="{{$work->title}}">{{$work->shortTitle}}</p>
+                            <p class="menu-info-name" title="{{$work->title}}">{{ucfirst($work->shortTitle)}}</p>
                             <p class="menu-info-address" title="{{$work->purchase_location}}">
                                 <span class="fa fa-map-marker"></span>
                                 {{ ucfirst($work->shortAddress) }}
@@ -57,7 +57,7 @@
                             </p>
                         </div>
                         <div class="menu-block-right">
-                            <p class="menu-info-price">{{number_format($work->price)}}đ</p>
+                            <p class="menu-info-price">{{$work->showPrice}}đ</p>
                             <p class="menu-info-status">{{ $work->status }}</p>
                             <p class="menu-info-day">{{ $work->timeFinish }}</p>
                         </div>

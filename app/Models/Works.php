@@ -13,24 +13,31 @@ class Works extends Model
     public $timestamps = false;
 
     protected $fillable = ['type', 'title', 'description', 'time_begin', 'time_end', 'image_default',
-        'create_time', 'user_id', 'number_people', 'price', 'purchase_location', 'picture_id', 'gender'];
+        'create_time', 'user_id', 'number_people', 'price', 'purchase_location', 'picture_id', 'gender',
+        'deadline', 'name_receiver', 'phone_receiver', 'delivery_location', 'time_work'];
+
+    public function getShowPriceAttribute()
+    {
+        $prices = explode('-', $this->price);
+        $result = '';
+        foreach($prices as $price) {
+            $result .= number_format($price).'-';
+        }
+        return rtrim($result, '-');
+    }
 
     public function getShortTitleAttribute()
     {
-        if (mb_strlen($this->title) >= 30) {
-            return substr($this->title, 0, 27).' ...';
-        }
+        $result = $this->cutStringBySpace($this->title, 20);
 
-        return $this->title;
+        return $result;
     }
 
     public function getShortAddressAttribute()
     {
-        if (mb_strlen($this->purchase_location) >= 0) {
-            return substr($this->purchase_location, 0, 20).' ...';
-        }
+        $result = $this->cutStringBySpace($this->purchase_location, 20);
 
-        return $this->purchase_location;
+        return $result;
     }
 
     public function getAvatarAttribute()
@@ -40,8 +47,9 @@ class Works extends Model
 
     public function getTimeFinishAttribute()
     {
-        if($this->time_end) {
-            $time = date('d/m/Y', $this->time_end/1000);
+        $time = $this->time_begin;
+        if($time) {
+            $time = date('d-m-Y', $time/1000);
             return $time;
         }
         return '';
@@ -63,6 +71,23 @@ class Works extends Model
     public function getNumberOfRequestAttribute()
     {
         return count($this->request);
+    }
+
+    function cutStringBySpace($str, $length, $minword = 3)
+    {
+        $sub = '';
+        $len = 0;
+        foreach (explode(' ', $str) as $word)
+        {
+            $part = (($sub != '') ? ' ' : '') . $word;
+            $sub .= $part;
+            $len += strlen($part);
+            if (strlen($word) > $minword && strlen($sub) >= $length)
+            {
+                break;
+            }
+        }
+        return $sub . (($len < strlen($str)) ? '...' : '');
     }
 
     public function user()

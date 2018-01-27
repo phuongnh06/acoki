@@ -484,3 +484,16 @@ a.intro-more {
 .blue-part p span {
     margin-right: 10px;
 }
+
+.buy, .work, .pg, .talk, .online {
+    display: none;
+}
+
+.ship {
+    display: block;
+}
+
+.field-required:before {
+    content: "*";
+    color: red;
+}
