@@ -165,8 +165,8 @@
             $('.datepicker').datepicker({
                 autoclose: true,
                 format: 'dd-mm-yyyy',
+                startDate: 'd',
                 clearBtn: true,
-                language: '{{ App::getLocale() }}',
             });
         })
     </script>
