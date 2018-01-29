@@ -60,7 +60,7 @@
                                 {{ ucfirst($work->shortAddress) }}
                             </p>
                             <p class="menu-info-info">
-                                {{$work->numberOfComment}} ứng tuyển, {{$work->numberOfRequest}} bình luận
+                                {{$work->numberOfRequest}} ứng tuyển, {{$work->numberOfComment}} bình luận
                             </p>
                         </div>
                         <div class="menu-block-right">
