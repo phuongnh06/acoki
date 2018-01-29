@@ -21,7 +21,7 @@ class Works extends Model
         $prices = explode('-', $this->price);
         $result = '';
         foreach($prices as $price) {
-            $result .= number_format($price).'-';
+            $result .= is_numeric($price) ? number_format($price).'-' : $price;
         }
         return rtrim($result, '-');
     }

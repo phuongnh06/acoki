@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Users;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Contracts\User as ProviderUser;
 use Mockery\Exception;
+use AccountKit;
 
 class FacebookLoginController extends Controller
 {
@@ -44,5 +46,11 @@ class FacebookLoginController extends Controller
         }
 
         return $account;
+    }
+
+    public function loginViaAccountKit(Request $request)
+    {
+        $accountKit = AccountKit::accountKitData($request->code);
+        return $accountKit;
     }
 }

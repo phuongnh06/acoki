@@ -7,6 +7,13 @@
                     ĐĂNG VIỆC NGAY
                 </p>
             </div>
+            <div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        Lỗi: Đăng việc thất bại.
+                    </div>
+                @endif
+            </div>
             <form method="post" action="">
                 <div class="form-group">
                     <label>Tiêu đề</label>

@@ -17,6 +17,9 @@ Route::resource('/', 'JobController')->except('destroy');
 
 Route::get('/redirect', ['as' => 'facebookredirect', 'uses' => 'FacebookLoginController@redirect']);
 Route::get('/login', ['as' => 'facebookcallback', 'uses' => 'FacebookLoginController@callback']);
+
+//Route::post('/signin', ['as' => 'accountkit', 'uses' => 'FacebookLoginController@loginViaAccountKit']);
+
 Route::get('/logout', function(){
     Auth::logout();
     return redirect()->route('index');
